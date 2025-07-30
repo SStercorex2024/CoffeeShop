@@ -10,6 +10,7 @@ export default defineConfig({
     outDir: 'assets',
     outName: '[name]',
     images: {
+      srcDir: 'src/assets/images',
       outDir: 'assets/images',
       outName: '[name]',
       remoteName: 'remote',

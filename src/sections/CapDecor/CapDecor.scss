@@ -1,0 +1,14 @@
+.cap-decor {
+  background: var(--color-black);
+  padding-block: var(--section-padding-y);
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  &__image {
+    max-width: fluid(788, 290);
+  }
+}
