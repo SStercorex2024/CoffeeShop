@@ -1,11 +1,27 @@
 .header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: var(--z-index-header);
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+  background: rgba(#5C4633, .2);
+
+  @keyframes scrolling-header {
+    to {
+      padding-block: 10px;
+      border-bottom: var(--border-main);
+    }
+  }
 
   &__content {
     position: relative;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     column-gap: 30px;
-    padding-block: fluid-to-laptop(10, 8);
   }
 
   &__logo {
@@ -31,15 +47,19 @@
     }
 
     &.is-active {
-      opacity: 1;
-      pointer-events: auto;
-      background-color: #F5EDE7;
+      @include mobile {
+        opacity: 1;
+        pointer-events: auto;
+        background-color: #F5EDE7;
+      }
     }
   }
 
   &__navigation {
-    position: absolute;
-    top: 10%;
+    @include mobile {
+      position: absolute;
+      top: 10%;
+    }
   }
 
   &__list {

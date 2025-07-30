@@ -19,6 +19,7 @@
 
 
     @include hover {
+      color: var(--color-light);
       background-color: var(--color-hover);
     }
 
@@ -39,7 +40,7 @@
     font-weight: 500;
 
     @include hover {
-      border: var(--border);
+      border: var(--border-main);
     }
 
     &:active {
