@@ -1,0 +1,18 @@
+.logo {
+  display: flex;
+  align-items: center;
+  transition-duration: var(--transition-duration);
+
+  &__icon {
+    @include square(100px);
+    border-radius: 50%;
+    border: var(--border);
+
+    @include hover {
+      border-color: var(--color-hover);
+      -webkit-box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
+      -moz-box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
+      box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
+    }
+  }
+}

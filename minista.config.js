@@ -21,22 +21,16 @@ export default defineConfig({
         resolution: [1, 2],
         format: ['avif', 'webp', 'jpeg'],
         formatOptions: {
-          avif: {
-            quality: 80,
-          },
-          webp: {
-            quality: 70,
-          },
-          jpeg: {
-            quality: 80,
-          },
+          avif: {quality: 80},
+          webp: {quality: 70},
+          jpeg: {quality: 80}
         },
         quality: 80,
         aspect: undefined,
         background: undefined,
         fit: 'cover',
-        position: 'centre',
-      },
+        position: 'centre'
+      }
     },
     svgr: {
       svgrOptions: {},
@@ -46,7 +40,7 @@ export default defineConfig({
       outDir: 'assets/images',
       outName: '[dirname]',
       svgstoreOptions: {
-        cleanSymbols: ['fill', 'stroke', 'stroke-linejoin', 'stroke-width'],
+        cleanSymbols: ['fill', 'stroke'],
       },
     },
     fonts: {

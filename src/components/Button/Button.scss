@@ -1,0 +1,51 @@
+.button {
+  --padding-buttom-y: #{fluid(15, 12)};
+  --padding-buttom-x: #{fluid(16, 14)};
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  transition-duration: var(--transition-duration);
+
+  &--accent {
+    padding: var(--padding-buttom-y) var(--padding-buttom-x);
+    color: var(--color-light);
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius-m);
+
+
+    @include hover {
+      background-color: var(--color-hover);
+    }
+
+    &:active {
+      -webkit-box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
+      -moz-box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
+      box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
+    }
+  }
+
+  &--secondary {
+    padding: var(--padding-buttom-y) var(--padding-buttom-x);
+    border: var(--border);
+    border-radius: var(--border-radius-m);
+    background-color: transparent;
+    color: var(--color-light);
+    font-size: 14px;
+    font-weight: 500;
+
+    @include hover {
+      border: var(--border);
+    }
+
+    &:active {
+      -webkit-box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
+      -moz-box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
+      box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
+    }
+  }
+}
