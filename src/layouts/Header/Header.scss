@@ -8,6 +8,7 @@
   animation-timeline: scroll();
   animation-range: 0 100px;
   background: rgba(#5C4633, .2);
+  padding-top: 12px;
 
   @keyframes scrolling-header {
     to {

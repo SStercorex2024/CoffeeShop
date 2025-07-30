@@ -29,6 +29,10 @@ const Banner = (props) => {
       aria-labelledby="banner-title"
     >
       <div className="container">
+        <h1 className="visually-hidden" title="banner-title">Start Your Day with
+          Coffee
+          Moments
+        </h1>
         <div
           className="swiper banner__slider slider"
           data-js-slider=""
@@ -39,12 +43,12 @@ const Banner = (props) => {
             {itemsSlider.map(({title, description}, index) => (
               <div className="swiper-slide banner__slide" key={index}>
                 <div className="banner__content">
-                  <h1
+                  <h2
                     className="banner__title"
                     id="banner-title"
                   >
                     {title}
-                  </h1>
+                  </h2>
                   <div className="banner__description">
                     <p>{description}</p>
                   </div>

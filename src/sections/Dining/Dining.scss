@@ -1,0 +1,55 @@
+.dining {
+  background: var(--color-black);
+  padding-block: var(--section-padding-y);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: fluid(80, 60);
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: fluid(24, 16);
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: fluid(32, 24);
+    color: var(--color-light);
+    max-width: 376px;
+    line-height: 1.2;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  &__extra {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    row-gap: fluid-to-laptop(10, 6);
+
+    @include mobile {
+      align-items: center;
+    }
+  }
+
+  &__description {
+    color: var(--color-main);
+    max-width: fluid-to-laptop(340, 250);
+  }
+
+  &__link {
+    color: var(--color-light);
+    @include fluid-text(20, 16);
+    padding-bottom: fluid-to-laptop(6, 2);
+    border-bottom: var(--border-light);
+  }
+}
