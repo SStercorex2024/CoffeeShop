@@ -17,7 +17,7 @@ const Header = (props) => {
       name: 'About'
     },
     {
-      name: 'Manu'
+      name: 'Menu'
     },
     {
       name: 'RESERVATION'
