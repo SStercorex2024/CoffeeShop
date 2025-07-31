@@ -83,7 +83,7 @@ const PopularMenu = () => {
                       <p>{description}</p>
                     </div>
                   </div>
-                  <span className="popular-menu__price">{price}</span>
+                  <span className="popular-menu__price price">{price}</span>
                 </div>
               </li>
             ))}
