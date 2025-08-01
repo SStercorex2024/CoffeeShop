@@ -1,0 +1,187 @@
+.questbook {
+  --marginSection: #{fluid(-28, -10)};
+
+  padding-block: calc(var(--section-padding-y) * 2);
+  background-color: var(--color-main-bg);
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: var(--section-padding-y);
+    justify-items: center;
+  }
+
+  &__title {
+    padding-bottom: var(--section-padding-y);
+    align-self: center;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    position: relative;
+    transition-duration: var(--transition-duration);
+    z-index: var(--z-index-questbook);
+
+    &:nth-child(2) {
+      margin-inline: var(--marginSection);
+
+      @include tablet {
+        margin-inline: 0;
+        margin-block: var(--marginSection);
+      }
+    }
+
+    &.is-active {
+      z-index: var(--z-index-questbook-active);
+
+      .questbook__card-text {
+        padding: fluid-to-laptop(29, 16) fluid-to-laptop(22, 10) fluid-to-laptop(64, 34);
+        background-color: var(--color-hover);
+        height: fluid-to-laptop(230, 170);
+
+        @include hover {
+          background-color: var(--color-accent);
+          border-color: transparent;
+        }
+
+        @include tablet {
+          height: 300px;
+        }
+      }
+
+      .questbook__card-icon {
+        color: var(--color-black);
+      }
+
+      .questbook__card-image {
+        @include square(fluid-to-laptop(80, 58));
+
+        @include tablet {
+          display: block;
+          @include square(fluid(100, 60));
+        }
+      }
+
+      .questbook__card-name {
+        opacity: 1;
+      }
+
+      .questbook__card-position {
+        opacity: 1;
+      }
+
+      .questbook__card-image-block {
+        opacity: 1;
+        display: flex;
+      }
+    }
+
+    @include hover {
+      .questbook__card-name {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__card-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: fluid-to-laptop(17, 5);
+    transition-duration: var(--transition-duration);
+    border-radius: var(--border-radius-m);
+    padding: fluid-to-laptop(24, 12) fluid-to-laptop(18, 6) fluid-to-laptop(54, 27);
+    background-color: var(--color-second);
+    height: fluid-to-laptop(191, 150);
+    border: var(--border-width-s) solid transparent;
+
+    @include hover {
+      border-color: var(--color-font-1);
+    }
+
+    @include tablet {
+      height: 200px;
+      width: 90vw;
+      justify-content: flex-start;
+    }
+  }
+
+  &__card-icon {
+    width: 41px;
+    height: 34px;
+    color: var(--color-light);
+  }
+
+  &__card-description {
+    text-align: center;
+    font-size: 14px;
+
+    @include tablet {
+      max-width: 250px;
+    }
+  }
+
+  &__card-image-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: fluid-to-laptop(12, 6);
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+    right: 0;
+
+    @include tablet-above {
+      bottom: -46%;
+      left: 0;
+      right: 0;
+      translate: 0 0;
+    }
+
+    @include tablet {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  &__card-image {
+    @include square(fluid-to-laptop(68, 48));
+
+    border-radius: 50%;
+
+    @include tablet {
+
+    }
+  }
+
+  &__card-name {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 500;
+    opacity: 0.3;
+    color: var(--color-font-1);
+    transition-duration: var(--transition-duration);
+  }
+
+  &__card-position {
+    font-size: 12px;
+    opacity: 0.3;
+    color: var(--color-font-1);
+    transition-duration: var(--transition-duration);
+  }
+}
