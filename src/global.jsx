@@ -1,20 +1,17 @@
-import '@/styles'
-import {Head} from 'minista'
-import Header from '@/layouts/Header'
-import Content from '@/layouts/Content'
-import Footer from '@/layouts/Footer'
+import "@/styles"
+import { Head } from "minista"
+import Header from "@/layouts/Header"
+import Content from "@/layouts/Content"
+import Footer from "@/layouts/Footer"
 
 export default function (props) {
-  const {
-    children,
-    title,
-  } = props
+  const { children, title } = props
 
   return (
     <>
-      <Head htmlAttributes={{lang: 'en'}}>
+      <Head htmlAttributes={{ lang: "en" }}>
         <title>CAFENA | {title}</title>
-        <script src="/src/main.js" type="module"/>
+        <script src="/src/main.js" type="module" />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -32,13 +29,11 @@ export default function (props) {
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest"/>
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
-      <Header/>
-      <Content>
-        {children}
-      </Content>
-      <Footer/>
+      <Header />
+      <Content>{children}</Content>
+      <Footer />
     </>
   )
 }

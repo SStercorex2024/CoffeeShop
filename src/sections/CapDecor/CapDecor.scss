@@ -3,9 +3,8 @@
   padding-block: var(--section-padding-y);
 
   &__content {
-      display: flex;
-    justify-content: center;
-    align-content: center;
+    display: flex;
+    place-content: center center;
   }
 
   &__image {

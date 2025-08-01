@@ -1,18 +1,20 @@
 class OverlayMenu {
   selectors = {
-    root: '[data-js-overlay-menu]',
-    dialog: '[data-js-overlay-menu-dialog]',
-    burgerButton: '[data-js-overlay-menu-burger-button]',
+    root: "[data-js-overlay-menu]",
+    dialog: "[data-js-overlay-menu-dialog]",
+    burgerButton: "[data-js-overlay-menu-burger-button]",
   }
 
   stateClasses = {
-    isActive: 'is-active',
+    isActive: "is-active",
   }
 
   constructor() {
     this.rootElement = document.querySelector(this.selectors.root)
     this.dialogElement = this.rootElement.querySelector(this.selectors.dialog)
-    this.burgerButtonElement = this.rootElement.querySelector(this.selectors.burgerButton)
+    this.burgerButtonElement = this.rootElement.querySelector(
+      this.selectors.burgerButton,
+    )
     this.bindElement()
     this.onChangeWindow()
   }
@@ -41,8 +43,8 @@ class OverlayMenu {
   }
 
   bindElement = () => {
-    this.burgerButtonElement.addEventListener('click', this.onBurgerClickButton)
-    window.addEventListener('resize', this.onChangeWindow)
+    this.burgerButtonElement.addEventListener("click", this.onBurgerClickButton)
+    window.addEventListener("resize", this.onChangeWindow)
     // window.addEventListener('scroll', this.onScroll)
   }
 }

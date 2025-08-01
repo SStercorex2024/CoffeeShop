@@ -1,3 +1,3 @@
-import SliderPagination from './SliderPagination'
+import SliderPagination from "./SliderPagination"
 
 export default SliderPagination

@@ -17,16 +17,15 @@
     background-color: var(--color-accent);
     border-radius: var(--border-radius-m);
 
-
     @include hover {
       color: var(--color-light);
       background-color: var(--color-hover);
     }
 
     &:active {
-      -webkit-box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
-      -moz-box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
-      box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
+      box-shadow: 0 0 18px 6px rgb(90 46 46 / 100%);
+      box-shadow: 0 0 18px 6px rgb(90 46 46 / 100%);
+      box-shadow: 0 0 18px 6px rgb(90 46 46 / 100%);
     }
   }
 
@@ -44,9 +43,9 @@
     }
 
     &:active {
-      -webkit-box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
-      -moz-box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
-      box-shadow: 0px 0px 18px 6px rgba(90, 46, 46, 1);
+      box-shadow: 0 0 18px 6px rgb(90 46 46 / 100%);
+      box-shadow: 0 0 18px 6px rgb(90 46 46 / 100%);
+      box-shadow: 0 0 18px 6px rgb(90 46 46 / 100%);
     }
   }
 }

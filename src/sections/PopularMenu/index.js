@@ -1,3 +1,3 @@
-import PopularMenu from './PopularMenu'
+import PopularMenu from "./PopularMenu"
 
 export default PopularMenu

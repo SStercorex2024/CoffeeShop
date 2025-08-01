@@ -1,23 +1,14 @@
-import './Logo.scss'
-import classNames from "classnames";
-import {Image} from "minista";
-import Icon from "@/components/Icon";
+import "./Logo.scss"
+import classNames from "classnames"
+import Icon from "@/components/Icon"
 
 const Logo = (props) => {
-  const {
-    className
-  } = props
+  const { className } = props
 
   return (
-    <div className={classNames(className, 'logo')}>
-      <a
-        href="/"
-        className="logo__link"
-      >
-        <Icon
-            className={classNames(className, 'logo__icon')}
-          name="logo"
-        />
+    <div className={classNames(className, "logo")}>
+      <a href="/" className="logo__link">
+        <Icon className={classNames(className, "logo__icon")} name="logo" />
       </a>
     </div>
   )

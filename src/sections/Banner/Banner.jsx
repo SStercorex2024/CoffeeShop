@@ -1,52 +1,44 @@
-import './Banner.scss'
-import classNames from "classnames";
-import Button from "@/components/Button";
-import SliderPagination from "@/components/SliderPagination";
+import "./Banner.scss"
+import classNames from "classnames"
+import Button from "@/components/Button"
+import SliderPagination from "@/components/SliderPagination"
 
 const Banner = (props) => {
-  const {
-    className
-  } = props
+  const { className } = props
 
   const itemsSlider = [
     {
-      title: 'Rosted coffee for you',
-      description: 'The coffee is brewed by first roasting the green coffee coals in a brazier. given an opportunity to sample.',
+      title: "Rosted coffee for you",
+      description:
+        "The coffee is brewed by first roasting the green coffee coals in a brazier. given an opportunity to sample.",
     },
     {
-      title: 'Fine aroma in every sip',
-      description: 'Carefully selected beans are slow-roasted to perfection, bringing out their natural sweetness and bold flavor.',
+      title: "Fine aroma in every sip",
+      description:
+        "Carefully selected beans are slow-roasted to perfection, bringing out their natural sweetness and bold flavor.",
     },
     {
-      title: 'Freshly ground every morning',
-      description: 'From roast to grind, each step is crafted with care to deliver a smooth and satisfying coffee experience.'
+      title: "Freshly ground every morning",
+      description:
+        "From roast to grind, each step is crafted with care to deliver a smooth and satisfying coffee experience.",
     },
   ]
 
   return (
     <section
-      className={classNames(className, 'banner')}
+      className={classNames(className, "banner")}
       aria-labelledby="banner-title"
     >
       <div className="container">
-        <h1 className="visually-hidden" title="banner-title">Start Your Day with
-          Coffee
-          Moments
+        <h1 className="visually-hidden" title="banner-title">
+          Start Your Day with Coffee Moments
         </h1>
-        <div
-          className="swiper banner__slider slider"
-          data-js-slider=""
-        >
-          <div
-            className="swiper-wrapper"
-          >
-            {itemsSlider.map(({title, description}, index) => (
+        <div className="swiper banner__slider slider" data-js-slider="">
+          <div className="swiper-wrapper">
+            {itemsSlider.map(({ title, description }, index) => (
               <div className="swiper-slide banner__slide" key={index}>
                 <div className="banner__content">
-                  <h2
-                    className="banner__title"
-                    id="banner-title"
-                  >
+                  <h2 className="banner__title" id="banner-title">
                     {title}
                   </h2>
                   <div className="banner__description">
@@ -69,7 +61,7 @@ const Banner = (props) => {
               </div>
             ))}
           </div>
-          <SliderPagination className="banner__slider-pagination"/>
+          <SliderPagination className="banner__slider-pagination" />
         </div>
       </div>
     </section>

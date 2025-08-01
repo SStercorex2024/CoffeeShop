@@ -1,63 +1,59 @@
-import './Header.scss'
-import classNames from "classnames";
-import Button from "@/components/Button";
-import BurgerButton from "@/components/BurgerButton";
-import Logo from "@/components/Logo";
+import "./Header.scss"
+import classNames from "classnames"
+import Button from "@/components/Button"
+import BurgerButton from "@/components/BurgerButton"
+import Logo from "@/components/Logo"
 
 const Header = (props) => {
-  const {
-    isHeaderSticky = true
-  } = props
+  const { isHeaderSticky = true } = props
 
   const menuItems = [
     {
-      name: 'Home'
+      name: "Home",
     },
     {
-      name: 'About'
+      name: "About",
     },
     {
-      name: 'Menu'
+      name: "Menu",
     },
     {
-      name: 'RESERVATION'
+      name: "RESERVATION",
     },
     {
-      name: 'Shop'
+      name: "Shop",
     },
     {
-      name: 'Contact'
+      name: "Contact",
     },
     {
-      name: 'Book Now'
+      name: "Book Now",
     },
   ]
 
   return (
     <header
-      className={classNames('header', {
-        'header--sticky': isHeaderSticky
+      className={classNames("header", {
+        "header--sticky": isHeaderSticky,
       })}
     >
-      <div
-        className="header__content container"
-        data-js-overlay-menu=""
-      >
-        <Logo className="header__logo"/>
-        <div
-          className="header__dialog"
-          data-js-overlay-menu-dialog=""
-        >
+      <div className="header__content container" data-js-overlay-menu="">
+        <Logo className="header__logo" />
+        <div className="header__dialog" data-js-overlay-menu-dialog="">
           <nav className="header__navigation">
             <ul className="header__list">
-              {menuItems.map(({name}, index) => (
+              {menuItems.map(({ name }, index) => (
                 <li className="header__list-item" key={index}>
-                  {name !== 'Book Now' ? (
+                  {name !== "Book Now" ? (
                     <a
                       className="header__list-link"
-                      href={name === 'Home' ? '/' : `#${name.toLocaleLowerCase()}`}
+                      href={
+                        name === "Home" ? "/" : `#${name.toLocaleLowerCase()}`
+                      }
                       key={index}
-                    >{name}</a>
+                    >
+                      {name}
+                    </a>
                   ) : (
                     <Button
                       className="header__list-link"
@@ -73,7 +69,7 @@ const Header = (props) => {
         </div>
         <BurgerButton
           className="header__burger-button"
-          extraAttrs={{"data-js-overlay-menu-burger-button": ""}}
+          extraAttrs={{ "data-js-overlay-menu-burger-button": "" }}
         />
       </div>
     </header>

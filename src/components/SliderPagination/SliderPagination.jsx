@@ -1,14 +1,12 @@
-import './SliderPagination.scss'
-import classNames from "classnames";
+import "./SliderPagination.scss"
+import classNames from "classnames"
 
 const SliderPagination = (props) => {
-  const {
-    className
-  } = props
+  const { className } = props
 
   return (
     <div
-      className={classNames(className, 'slider-pagination')}
+      className={classNames(className, "slider-pagination")}
       data-js-slider-pagination=""
     ></div>
   )

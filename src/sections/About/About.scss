@@ -1,7 +1,6 @@
 .about {
   background-color: var(--color-gray-1);
 
-
   &__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -74,7 +73,8 @@
       color: var(--color-light);
       width: fluid(48, 18);
       height: fluid(40, 20);
-      @include fluid-text(60, 40)
+
+      @include fluid-text(60, 40);
     }
 
     &::after {
@@ -106,6 +106,7 @@
 
   &__title {
     @include fluid-text(50, 20);
+
     line-height: 1;
     color: var(--color-light);
     margin-bottom: fluid(30, 14);
@@ -160,6 +161,7 @@
     font-family: var(--font-famity-title);
     text-align: center;
     line-height: 1;
+
     @include fluid-text(60, 24);
 
     @include laptop {
