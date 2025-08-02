@@ -13,8 +13,8 @@ const Contact = () => {
     {
       iconName: "mail",
       subtitle: "TICKETS INFO",
-      email: "info@yourdomain.com",
-      subemail: "hr@yourdomain.com",
+      email: "info@coffeena.com",
+      subemail: "hr@coffeena.com",
     },
     {
       iconName: "map",

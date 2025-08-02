@@ -29,7 +29,7 @@ const Dining = (props) => {
             </div>
             <Button
               className="dining__link"
-              href="#about-us"
+              href="#about"
               label="ABOUT US"
             />
           </div>

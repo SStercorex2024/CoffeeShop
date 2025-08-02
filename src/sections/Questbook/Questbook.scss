@@ -53,6 +53,7 @@
         padding: fluid-to-laptop(29, 16) fluid-to-laptop(22, 10) fluid-to-laptop(64, 34);
         background-color: var(--color-hover);
         height: fluid-to-laptop(230, 170);
+        color: var(--color-font-1);
 
         @include hover {
           background-color: var(--color-accent);
