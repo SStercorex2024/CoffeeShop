@@ -8,7 +8,7 @@ const Services = () => {
   const sliderItems = [
     {
       iconName: "cup-1",
-      title: "Type Of Coffee",
+      subtitle: "Type Of Coffee",
       description:
         "Explore our wide selection of coffee types, from espresso to cold brew, crafted to suit every taste.",
       srcImg: "/src/assets/images/services/1.jpg",
@@ -95,7 +95,11 @@ const Services = () => {
   const title = "What We Offer to Coffee Lovers"
 
   return (
-    <section className="services" aria-labelledby="section-services-title">
+    <section
+      className="services"
+      aria-labelledby="section-services-title"
+      id="shop"
+    >
       <h2 className="visually-hidden" id="section-services-title">
         {title}
       </h2>
