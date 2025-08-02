@@ -6,6 +6,7 @@
   &__icon {
     @include square(100px);
 
+    color: var(--color-gold);
     border-radius: 50%;
     border: var(--border);
 

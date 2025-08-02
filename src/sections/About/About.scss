@@ -45,17 +45,13 @@
       }
 
       @include mobile-s {
-        height: 62%;
-        width: 80%;
+        height: 50%;
+        width: 35%;
       }
     }
 
     @include tablet {
-      height: 30vh;
-    }
-
-    @include mobile {
-      height: 25vh;
+      height: min(400px);
     }
   }
 
@@ -81,12 +77,21 @@
       content: "\201C";
       right: -12px;
       bottom: -42px;
+
+      @include tablet {
+        bottom: 0;
+        right: 0;
+      }
     }
 
     &::before {
       content: "\201D";
       left: -52px;
       top: -42px;
+
+      @include tablet {
+        top: 0;
+      }
     }
 
     @include laptop {
@@ -95,12 +100,12 @@
     }
 
     @include tablet {
-      margin-inline-end: 10vw;
+      margin-inline-end: 0;
     }
 
     @include mobile {
       align-self: baseline;
-      margin-block-start: 32px;
+      margin-block-start: 10px;
     }
   }
 

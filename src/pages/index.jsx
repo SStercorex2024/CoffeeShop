@@ -5,6 +5,7 @@ import PopularMenu from "@/sections/PopularMenu"
 import ExclusiveCoffee from "@/sections/ExclusiveCoffee"
 import About from "@/sections/About"
 import Questbook from "@/sections/Questbook"
+import Services from "@/sections/Services"
 
 export const metadata = {
   title: "Home",
@@ -20,6 +21,7 @@ export default function () {
       <ExclusiveCoffee />
       <About />
       <Questbook />
+      <Services />
     </>
   )
 }
