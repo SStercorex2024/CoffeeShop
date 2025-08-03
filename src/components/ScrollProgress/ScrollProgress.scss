@@ -19,10 +19,10 @@
 #progress-value {
   height: calc(100% - 15px);
   width: calc(100% - 15px);
-  background-color: #fff;
+  background-color: var(--color-gray-1);
   border-radius: 50%;
   display: grid;
   place-items: center;
   font-size: 35px;
-  color: #001a2e;
+  color: var(--color-gold);
 }

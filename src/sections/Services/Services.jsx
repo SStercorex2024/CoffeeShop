@@ -1,5 +1,4 @@
 import "./Services.scss"
-import React from "react"
 import { Picture } from "minista"
 import Icon from "@/components/Icon"
 import toTitleCase from "@/constants/toTitleCase"

@@ -39,7 +39,7 @@ const ExclusiveCoffee = () => {
             </h2>
           </div>
           <ul className="exclusive-coffee__list">
-            {listItems.map(({ imgUrl, title, description, price, index }) => (
+            {listItems.map(({ imgUrl, title, description, price }, index) => (
               <li className="exclusive-coffee__item" key={index}>
                 <Picture
                   className="exclusive-coffee__image"
