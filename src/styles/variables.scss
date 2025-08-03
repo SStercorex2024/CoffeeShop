@@ -1,17 +1,18 @@
 :root {
-  --color-light: #F9F9F9;
-  --color-black: #111111;
+  --color-light: #f9f9f9;
+  --color-black: #111;
 
-  --color-font-1: #EAEAEA;
-  --color-main: #8C6E5A; // Горький кофе
-  --color-main-bg: #2C1D17; // Горький кофе
-  --color-accent: #C49A6C; // Золотистый латте
-  --color-second: #5A4435; // Ровная корка
+  --color-font-1: #eaeaea;
+  --color-main: #8c6e5a; // Горький кофе
+  --color-main-bg: #2c1d17; // Горький кофе
+  --color-accent: #c49a6c; // Золотистый латте
+  --color-second: #5a4435; // Ровная корка
+  --color-gold: #D3AD7F;
 
   --color-gray-1: #191919;
 
-  --color-hover: #AD825B; // Ореховый крем
-  --color-active: #3A2A22; // Тёмный шоколад
+  --color-hover: #ad825b; // Ореховый крем
+  --color-active: #3a2a22; // Тёмный шоколад
 
   --border: var(--border-width-s) solid var(--color-accent);
   --border-light: var(--border-width-s) solid var(--color-light);
@@ -21,14 +22,14 @@
 
   --border-radius-m: 6px;
 
-  --font-family-base: 'Poppins', sans-serif;
+  --font-family-base: "Poppins", sans-serif;
 
-  --font-famity-title: 'BebasNeue', sans-serif;
+  --font-famity-title: "BebasNeue", sans-serif;
 
   --container-width: #{fluid-to-laptop(
-    $container-desktop-width,
-    $container-laptop-width
-  )};
+      $container-desktop-width,
+      $container-laptop-width
+    )};
   --container-padding-x: 16px;
 
   --section-padding-y: #{fluid(50, 30)};
@@ -38,6 +39,8 @@
 
   --z-index-slider-pagination: 10;
   --z-index-header: 80;
+  --z-index-questbook: 60;
+  --z-index-questbook-active: 70;
   --z-index-overlay-menu: 90;
   --z-index-overlay-logo: 95;
   --z-index-overlay-burger: 100;

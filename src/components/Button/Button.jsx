@@ -1,17 +1,17 @@
-import './Button.scss'
-import classNames from "classnames";
-import Icon from "@/components/Icon";
+import "./Button.scss"
+import classNames from "classnames"
+import Icon from "@/components/Icon"
 
 const Button = (props) => {
   const {
     className,
-    type = 'button',
+    type = "button",
     href,
     target,
     /**
      *  'transparent' default | ' accent ' | 'secondary'
      */
-    mode = '',
+    mode = "",
     label,
     isLabelHidden = false,
     iconName,
@@ -19,22 +19,18 @@ const Button = (props) => {
   } = props
 
   const isLink = href !== undefined
-  const Component = isLink ? 'a' : 'button'
-  const linkProps = {href, target}
-  const buttonProps = {type}
+  const Component = isLink ? "a" : "button"
+  const linkProps = { href, target }
+  const buttonProps = { type }
   const specificProps = isLink ? linkProps : buttonProps
   const title = isLabelHidden ? label : undefined
   const IconComponent = iconName && (
-    <Icon
-      className="button__icon"
-      name={iconName}
-      hasFill={hasFillIcon}
-    />
+    <Icon className="button__icon" name={iconName} hasFill={hasFillIcon} />
   )
 
   return (
     <Component
-      className={classNames(className, 'button', {
+      className={classNames(className, "button", {
         [`button--${mode}`]: mode,
       })}
       title={title}
@@ -42,11 +38,9 @@ const Button = (props) => {
       {...specificProps}
     >
       {IconComponent}
-      {!isLabelHidden && (
-        <span className="button__label">{label}</span>
-      )}
+      {!isLabelHidden && <span className="button__label">{label}</span>}
     </Component>
   )
 }
 
-export default Button;
+export default Button

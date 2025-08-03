@@ -1,6 +1,5 @@
 .exclusive-coffee {
   padding-block: calc(var(--section-padding-y) * 2);
-
   background-color: var(--color-black);
 
   &__content {
@@ -8,7 +7,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
     row-gap: fluid(50, 20);
   }
 
@@ -48,7 +46,8 @@
   &__subtitle {
     color: var(--color-accent);
     font-weight: 600;
-    @include fluid-text(20, 14)
+
+    @include fluid-text(20, 14);
   }
 
   &__image {

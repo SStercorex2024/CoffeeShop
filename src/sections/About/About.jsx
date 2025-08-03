@@ -1,26 +1,24 @@
-import './About.scss'
-import {Picture} from "minista";
-import {Fragment} from "react";
+import "./About.scss"
+import { Picture } from "minista"
+import { Fragment } from "react"
 
 const About = () => {
-
   const itemsCards = [
     {
-      title: 'Delicious morning Coffee',
+      title: "Delicious morning Coffee",
     },
     {
-      imgUrl: '/src/assets/images/about/2.png'
-
+      imgUrl: "/src/assets/images/about/2.png",
     },
     {
-      imgUrl: '/src/assets/images/about/3.png'
+      imgUrl: "/src/assets/images/about/3.png",
     },
     {
-      title: 'Delicious morning Coffee'
+      title: "Delicious morning Coffee",
     },
   ]
 
-  const titleMessage = 'Masterchef message'
+  const titleMessage = "Masterchef message"
 
   return (
     <section className="about" aria-labelledby="section-about-title">
@@ -39,17 +37,16 @@ const About = () => {
               <p>
                 Start your day with a perfect cup — expertly brewed, rich in
                 flavor, and made with handpicked beans. Each sip is a warm
-                welcome
-                to the morning you deserve.
+                welcome to the morning you deserve.
               </p>
             </div>
           </div>
         </div>
 
         <div className="about__smalls-blocks">
-          {itemsCards.map(({imgUrl, title}, index) => (
+          {itemsCards.map(({ imgUrl, title }, index) => (
             <div
-              className={imgUrl ? 'about__image-block' : 'about__text-block'}
+              className={imgUrl ? "about__image-block" : "about__text-block"}
               key={index}
             >
               {imgUrl ? (
@@ -59,15 +56,18 @@ const About = () => {
                   formats={["webp", "avif"]}
                 />
               ) : (
-                <h3 className="about__text">{title.replace('morning', '\nmorning\n')
-                .toUpperCase()
-                .split('\n')
-                .map((line, idx) => (
-                  <Fragment key={idx}>
-                    {line}
-                    <br/>
-                  </Fragment>
-                ))}</h3>
+                <h3 className="about__text">
+                  {title
+                    .replace("morning", "\nmorning\n")
+                    .toUpperCase()
+                    .split("\n")
+                    .map((line, idx) => (
+                      <Fragment key={idx}>
+                        {line}
+                        <br />
+                      </Fragment>
+                    ))}
+                </h3>
               )}
             </div>
           ))}

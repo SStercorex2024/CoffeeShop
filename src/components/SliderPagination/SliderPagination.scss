@@ -15,12 +15,10 @@
     border: var(--border-light);
     background: transparent;
     cursor: pointer;
-
     transition: var(--transition-duration);
 
     &-active {
       background: var(--color-light);
-
     }
   }
 }

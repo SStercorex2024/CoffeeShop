@@ -1,3 +1,3 @@
-import Dining from './Dining'
+import Dining from "./Dining"
 
 export default Dining

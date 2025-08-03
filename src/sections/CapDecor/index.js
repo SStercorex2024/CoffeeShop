@@ -1,3 +1,3 @@
-import CapDecor from './CapDecor'
+import CapDecor from "./CapDecor"
 
 export default CapDecor

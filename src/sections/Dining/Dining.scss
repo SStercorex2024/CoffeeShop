@@ -48,7 +48,9 @@
 
   &__link {
     color: var(--color-light);
+
     @include fluid-text(20, 16);
+
     padding-bottom: fluid-to-laptop(6, 2);
     border-bottom: var(--border-light);
   }

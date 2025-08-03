@@ -5,7 +5,7 @@ body {
   flex-direction: column;
   font-family: var(--font-family-base);
   color: var(--color-main-bg);
-  background-color: #F5EDE7;
+  background-color: #f5ede7;
   font-weight: 400;
 }
 
@@ -44,7 +44,6 @@ a {
   color: var(--color-light);
 
   @include fluid-text(50, 24);
-
 
   &--width-lines {
     position: relative;
