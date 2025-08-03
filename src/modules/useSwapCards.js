@@ -16,7 +16,9 @@ class SwapCards {
   }
 
   handleClick(clickedIndex) {
-    if (clickedIndex === this.activeIndex) return
+    if (clickedIndex === this.activeIndex) {
+      return
+    }
 
     this.activeIndex = clickedIndex
     this.updateActiveClass()

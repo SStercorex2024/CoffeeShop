@@ -28,6 +28,7 @@ const Banner = (props) => {
     <section
       className={classNames(className, "banner")}
       aria-labelledby="banner-title"
+      id="about"
     >
       <div className="container">
         <h1 className="visually-hidden" title="banner-title">

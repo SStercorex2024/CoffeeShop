@@ -1,3 +1,3 @@
-import Questbook from './Questbook'
+import Questbook from "./Questbook"
 
 export default Questbook
