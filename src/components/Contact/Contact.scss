@@ -46,7 +46,6 @@
 
   &__icon-wrapper {
     @include square(fluid(79, 50));
-
     @include flex-center;
 
     border-radius: 50%;

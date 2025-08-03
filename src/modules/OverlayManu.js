@@ -3,6 +3,7 @@ class OverlayMenu {
     root: "[data-js-overlay-menu]",
     dialog: "[data-js-overlay-menu-dialog]",
     burgerButton: "[data-js-overlay-menu-burger-button]",
+    menuLinks: "a",
   }
 
   stateClasses = {
@@ -15,6 +16,10 @@ class OverlayMenu {
     this.burgerButtonElement = this.rootElement.querySelector(
       this.selectors.burgerButton,
     )
+    this.menuLinkElements = this.dialogElement.querySelectorAll(
+      this.selectors.menuLinks,
+    )
+
     this.bindElement()
     this.onChangeWindow()
   }
@@ -30,22 +35,23 @@ class OverlayMenu {
     }
   }
 
-  // onScroll = () => {
-  //   if (this.dialogElement.open) {
-  //     this.dialogElement.open = false
-  //     this.burgerButtonElement.classList.remove(this.stateClasses.isActive)
-  //   }
-  // }
-
   onBurgerClickButton = () => {
     this.burgerButtonElement.classList.toggle(this.stateClasses.isActive)
     this.dialogElement.classList.toggle(this.stateClasses.isActive)
   }
 
+  onLinkClick = () => {
+    this.burgerButtonElement.classList.remove(this.stateClasses.isActive)
+    this.dialogElement.classList.remove(this.stateClasses.isActive)
+  }
+
   bindElement = () => {
     this.burgerButtonElement.addEventListener("click", this.onBurgerClickButton)
     window.addEventListener("resize", this.onChangeWindow)
-    // window.addEventListener('scroll', this.onScroll)
+
+    this.menuLinkElements.forEach((link) => {
+      link.addEventListener("click", this.onLinkClick)
+    })
   }
 }
 

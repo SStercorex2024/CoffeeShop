@@ -27,11 +27,7 @@ const Dining = (props) => {
                 meals.
               </p>
             </div>
-            <Button
-              className="dining__link"
-              href="#about"
-              label="ABOUT US"
-            />
+            <Button className="dining__link" href="#about" label="ABOUT US" />
           </div>
         </div>
       </div>

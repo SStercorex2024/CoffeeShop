@@ -91,6 +91,7 @@ const Footer = () => {
                         <a
                           href={`/${toKebabCase(item)}`}
                           className="footer__sublist-sublink"
+                          rel="noreferrer"
                         >
                           {item}
                         </a>

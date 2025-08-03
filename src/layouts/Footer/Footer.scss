@@ -14,8 +14,7 @@
     column-gap: var(--columgGapFooter);
 
     @include tablet {
-      flex-direction: row;
-      flex-wrap: wrap-reverse;
+      flex-flow: row wrap-reverse;
       align-items: center;
       justify-content: space-around;
       gap: 20px 0;
@@ -43,11 +42,12 @@
     display: flex;
     margin-top: auto;
     column-gap: fluid-to-laptop(30, 12);
+    z-index: var(--z-index-footer-socials);
   }
 
   &__social-item {
     @include flex-center;
-    @include square(fluid-to-laptop(36, 26));
+    @include square(fluid-to-laptop(36, 30));
   }
 
   &__list {
@@ -68,7 +68,8 @@
     flex-direction: column;
     row-gap: fluid-to-laptop(20, 14);
     width: fluid-to-laptop(190, 150);
-    //align-self: start;
+
+    // align-self: start;
   }
 
   &__list-title {
@@ -106,6 +107,7 @@
     width: fluid-to-laptop(345, 300);
 
     @include mobile {
+      align-items: center;
       order: 1;
     }
   }
@@ -120,9 +122,10 @@
   }
 
   &__subscribe-input {
-    height: fluid-to-laptop(45, 30);
+    height: 45px;
     width: 100%;
     padding-left: 10px;
+    border: none;
     border-radius: var(--border-radius-m);
 
     &::placeholder {
@@ -131,12 +134,20 @@
       font-weight: 500;
       text-align: center;
     }
+
+    &:focus {
+      outline: 1px dashed var(--color-hover);
+    }
   }
 
   &__subscribe-button {
     margin-top: fluid-to-laptop(30, 20);
     color: var(--color-light);
     align-self: start;
+
+    @include mobile {
+      align-self: center;
+    }
   }
 
   &__rigths {
