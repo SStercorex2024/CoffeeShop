@@ -54,7 +54,11 @@ const PopularMenu = () => {
   ]
 
   return (
-    <section className="popular-menu" aria-labelledby="popular-menu-title">
+    <section
+      className="popular-menu"
+      id="menu"
+      aria-labelledby="popular-menu-title"
+    >
       <div className="container">
         <h1 className="visually-hidden" id="popular-menu-title">Top Picks for
           Coffee Lovers

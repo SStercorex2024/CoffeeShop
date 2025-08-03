@@ -8,6 +8,8 @@
   --color-accent: #C49A6C; // Золотистый латте
   --color-second: #5A4435; // Ровная корка
 
+  --color-gray-1: #191919;
+
   --color-hover: #AD825B; // Ореховый крем
   --color-active: #3A2A22; // Тёмный шоколад
 
@@ -20,6 +22,8 @@
   --border-radius-m: 6px;
 
   --font-family-base: 'Poppins', sans-serif;
+
+  --font-famity-title: 'BebasNeue', sans-serif;
 
   --container-width: #{fluid-to-laptop(
     $container-desktop-width,
