@@ -7,6 +7,7 @@ import About from "@/sections/About"
 import Questbook from "@/sections/Questbook"
 import Services from "@/sections/Services"
 import Contact from "@/components/Contact"
+import ScrollProgress from "@/components/ScrollProgress"
 
 export const metadata = {
   title: "Home",
@@ -15,6 +16,7 @@ export const metadata = {
 export default function () {
   return (
     <>
+      <ScrollProgress />
       <Banner />
       <Dining />
       <CapDecor />

@@ -1,0 +1,28 @@
+#progress {
+  position: fixed;
+  bottom: 20px;
+  right: 14px;
+  height: 60px;
+  width: 60px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  cursor: pointer;
+  z-index: var(--z-index-scroll-progress);
+
+  @include hover {
+    box-shadow: 0 0 18px 6px rgb(90 46 46 / 100%);
+  }
+}
+
+#progress-value {
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+  color: #001a2e;
+}

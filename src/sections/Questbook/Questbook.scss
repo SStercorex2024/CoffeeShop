@@ -43,6 +43,7 @@
       @include tablet {
         margin-inline: 0;
         margin-block: var(--marginSection);
+        order: 1;
       }
     }
 
