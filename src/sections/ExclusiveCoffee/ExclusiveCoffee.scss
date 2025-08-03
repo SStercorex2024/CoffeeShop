@@ -1,0 +1,57 @@
+.exclusive-coffee {
+  padding-block: calc(var(--section-padding-y) * 2);
+
+  background-color: var(--color-black);
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    row-gap: fluid(50, 20);
+  }
+
+  &__list {
+    display: flex;
+    column-gap: 10px;
+
+    @include laptop {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: fluid(32, 16);
+    padding: fluid(38, 12) fluid(50, 16);
+    background-color: transparent;
+    transition-duration: var(--transition-duration-longer);
+    border-radius: var(--border-radius-m);
+
+    @include hover {
+      background-color: var(--color-second);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: fluid(25, 10);
+  }
+
+  &__subtitle {
+    color: var(--color-accent);
+    font-weight: 600;
+    @include fluid-text(20, 14)
+  }
+
+  &__image {
+    width: 289px;
+  }
+}

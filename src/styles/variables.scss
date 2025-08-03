@@ -1,14 +1,15 @@
 :root {
-  --color-light: #FFFFFF;
-  --color-black: #000000;
+  --color-light: #F9F9F9;
+  --color-black: #111111;
 
-  --color-font-1: #FAF4EF;
-  --color-main: #5C4633;
-  --color-accent: #D8A07C;
-  --color-second: #9C6B5B;
+  --color-font-1: #EAEAEA;
+  --color-main: #8C6E5A; // Горький кофе
+  --color-main-bg: #2C1D17; // Горький кофе
+  --color-accent: #C49A6C; // Золотистый латте
+  --color-second: #5A4435; // Ровная корка
 
-  --color-hover: #BA8568;
-  --color-active: #7C4F3A;
+  --color-hover: #AD825B; // Ореховый крем
+  --color-active: #3A2A22; // Тёмный шоколад
 
   --border: var(--border-width-s) solid var(--color-accent);
   --border-light: var(--border-width-s) solid var(--color-light);

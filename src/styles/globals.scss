@@ -38,3 +38,42 @@ a {
 :focus-visible {
   @include focus-visible;
 }
+
+.h2 {
+  line-height: 1;
+  color: var(--color-light);
+
+  @include fluid-text(50, 24);
+
+
+  &--width-lines {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: fluid(88, 44);
+      height: 1px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--color-light);
+    }
+
+    &::before {
+      left: 0;
+      transform: translateY(-50%) translateX(calc(-100% - fluid(15, 8)));
+    }
+
+    &::after {
+      right: 0;
+      transform: translateY(-50%) translateX(calc(100% + fluid(15, 8)));
+    }
+  }
+}
+
+.price {
+  font-weight: 700;
+  color: var(--color-light);
+}
