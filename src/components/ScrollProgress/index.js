@@ -1,3 +1,3 @@
-import ScrollProgress from './ScrollProgress'
+import ScrollProgress from "./ScrollProgress"
 
 export default ScrollProgress

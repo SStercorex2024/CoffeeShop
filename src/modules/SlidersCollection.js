@@ -1,5 +1,5 @@
 import Swiper from "swiper"
-import { Pagination } from "swiper/modules"
+import { Autoplay, Pagination } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/pagination"
 
@@ -20,8 +20,7 @@ class Slider {
 
   init() {
     const defaultOption = {
-      modules: [Pagination],
-      // direction: "vertical",
+      modules: [Pagination, Autoplay],
       loop: true,
       pagination: this.paginationElement
         ? {
@@ -38,7 +37,12 @@ class Slider {
       ...this.option,
     }
 
-    new Swiper(this.rootElement, swiperOption)
+    const swiper = new Swiper(this.rootElement, swiperOption)
+
+    setTimeout(() => {
+      swiper.slideTo(0, 0)
+      swiper.update()
+    }, 100)
   }
 }
 
@@ -51,7 +55,9 @@ class SliderCollection {
     if (document.readyState === "complete") {
       this.initializeSliders()
     } else {
-      window.addEventListener("load", () => this.initializeSliders())
+      window.addEventListener("DOMContentLoaded", () =>
+        this.initializeSliders(),
+      )
     }
   }
 
@@ -74,27 +80,27 @@ class SliderCollection {
       new Slider(element, {
         slidesPerView: "auto",
         centeredSlides: true,
-        spaceBetween: 10,
+        direction: "horizontal",
+        spaceBetween: 20,
         loop: true,
+        speed: 800,
+        slideToClickedSlide: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
         breakpoints: {
-          340: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          767: {
-            slidesPerView: "auto",
-            spaceBetween: 16,
-          },
-          1023: {
-            spaceBetween: 20,
-          },
-          1400: {
-            spaceBetween: 30,
+          340: { spaceBetween: 10 },
+          768: { spaceBetween: 15 },
+          1024: { spaceBetween: 20 },
+          1440: { spaceBetween: 30 },
+        },
+        on: {
+          init: function () {
+            this.update()
           },
         },
-        loopAdditionalSlides: 1,
-        loopedSlides: 4,
-        watchSlidesProgress: true,
       })
     })
   }

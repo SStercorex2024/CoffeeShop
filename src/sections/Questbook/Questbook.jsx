@@ -1,5 +1,4 @@
 import "./Questbook.scss"
-import React from "react"
 import classNames from "classnames"
 
 import { Picture } from "minista"
@@ -9,7 +8,7 @@ const initialCardsItems = [
   {
     description:
       "Luca is our local weathered traveler who starts every morning with a doppio and a novel by the window.",
-    imgUrl: "/src/assets/images/guestbook/1.jpg",
+    imgUrl: "/src/assets/images/guestbook/4.jpg",
     iconName: "quotes",
     name: "Luca Moretti",
     position: "Regular Visitor",
@@ -17,7 +16,7 @@ const initialCardsItems = [
   {
     description:
       "Amélie crafts each cup like a small ritual — with passion, precision, and a smile that warms the room.",
-    imgUrl: "/src/assets/images/guestbook/2.jpg",
+    imgUrl: "/src/assets/images/guestbook/6.jpg",
     iconName: "quotes",
     name: "Amélie Dubois",
     position: "Barista",
@@ -25,7 +24,7 @@ const initialCardsItems = [
   {
     description:
       "Nikolai swears he studies better with our cold brew in hand and jazz playing softly in the background.",
-    imgUrl: "/src/assets/images/guestbook/3.jpg",
+    imgUrl: "/src/assets/images/guestbook/5.jpg",
     iconName: "quotes",
     name: "Nikolai Petrov",
     position: "Student",

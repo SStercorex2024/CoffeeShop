@@ -92,6 +92,11 @@
       @include tablet {
         top: 0;
       }
+
+      @include mobile {
+        left: -25px;
+        top: -20px;
+      }
     }
 
     @include laptop {

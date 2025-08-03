@@ -62,7 +62,7 @@ const About = () => {
                     .toUpperCase()
                     .split("\n")
                     .map((line, idx) => (
-                      <Fragment key={idx}>
+                      <Fragment key={`${line}-${idx}`}>
                         {line}
                         <br />
                       </Fragment>

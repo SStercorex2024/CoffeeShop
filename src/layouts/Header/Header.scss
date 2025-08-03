@@ -59,7 +59,8 @@
   &__navigation {
     @include mobile {
       position: absolute;
-      top: 10%;
+      top: 50%;
+      translate: 0 -50%;
     }
   }
 
